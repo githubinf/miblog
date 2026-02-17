@@ -124,33 +124,34 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Mapa de Batalla - Detalle masivo de capítulos */}
+      {/* Mapa de Batalla - Reestructurado a Cuadrícula de 2 Columnas */}
       <section id="contenido" className="py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
-            <div className="lg:sticky lg:top-24">
-              <span className="text-sky-900 font-bold uppercase tracking-[0.3em] text-xs">El Recorrido</span>
-              <h2 className="text-5xl md:text-6xl font-serif text-slate-900 mt-3 leading-tight">Lo que vas a descubrir en cada página</h2>
-              <p className="text-xl text-slate-500 mt-6 leading-relaxed font-light max-w-lg">
-                No es un manual teórico. Es un mapa de batalla con baches incluidos, con derrotas anotadas y con victorias pequeñas pero reales que te llevarán a la meta.
+          {/* Encabezado de Sección Centrado */}
+          <div className="max-w-3xl mx-auto text-center mb-20">
+            <span className="text-sky-900 font-bold uppercase tracking-[0.3em] text-xs">El Recorrido</span>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-slate-900 mt-4 leading-tight">Lo que vas a descubrir en cada página</h2>
+            <p className="text-lg md:text-xl text-slate-500 mt-6 leading-relaxed font-light">
+              No es un manual teórico. Es un mapa de batalla con baches incluidos, con derrotas anotadas y con victorias pequeñas pero reales que te llevarán a la meta.
+            </p>
+            <div className="mt-10 p-8 bg-sky-50 border-l-4 border-sky-900 inline-block text-left">
+              <p className="text-sky-900 font-medium italic text-lg md:text-xl leading-relaxed">
+                "Este libro condensa 15 años de errores propios para que tú puedas evitarlos en 15 capítulos."
               </p>
-              <div className="mt-10 p-10 bg-sky-50 border-l-4 border-sky-900">
-                <p className="text-sky-900 font-medium italic text-xl leading-relaxed">
-                  "Este libro condensa 15 años de errores propios para que tú puedas evitarlos en 15 capítulos."
-                </p>
+            </div>
+          </div>
+
+          {/* Cuadrícula de Capítulos: 2 columnas alineadas */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-16">
+            {CAPITULOS.map((cap) => (
+              <div key={cap.numero} className="group border-b border-slate-100 pb-10 flex flex-col items-start">
+                <span className="text-slate-200 text-5xl md:text-6xl font-serif font-bold group-hover:text-sky-900/10 transition-colors mb-4">
+                  {cap.numero.toString().padStart(2, '0')}
+                </span>
+                <h3 className="text-xl md:text-2xl font-serif text-slate-900 mb-4 leading-tight">{cap.titulo}</h3>
+                <p className="text-slate-600 leading-relaxed text-base md:text-lg font-light">{cap.descripcion}</p>
               </div>
-            </div>
-            <div className="space-y-12 lg:space-y-20">
-              {CAPITULOS.map((cap) => (
-                <div key={cap.numero} className="pb-12 border-b border-slate-100 group">
-                  <span className="text-slate-200 text-6xl md:text-7xl font-serif font-bold group-hover:text-sky-900/10 transition-colors block mb-2">
-                    {cap.numero.toString().padStart(2, '0')}
-                  </span>
-                  <h3 className="text-2xl md:text-3xl font-serif text-slate-900 mb-4">{cap.titulo}</h3>
-                  <p className="text-slate-600 leading-loose text-lg md:text-xl font-light">{cap.descripcion}</p>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>
