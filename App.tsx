@@ -4,20 +4,20 @@ import { CAPITULOS } from './constants';
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen selection:bg-yellow-100">
+    <div className="min-h-screen selection:bg-yellow-100 text-slate-900">
       {/* Título Principal de Impacto con Imagen del Libro */}
-      <header className="relative pt-20 pb-20 lg:pt-32 lg:pb-32 bg-gradient-to-b from-sky-50/50 to-white overflow-hidden">
+      <header className="relative pt-10 pb-10 lg:pt-16 lg:pb-16 bg-gradient-to-b from-sky-50/50 to-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-slate-900 leading-[1.05] mb-12">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-slate-900 leading-[1.05] mb-6">
               ¿Cansado de Publicar en tu Bitácora y No Ver <span className="text-red-600 italic">Ni un Solo Dólar</span>?
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-16 leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed font-light">
               Si has escrito decenas de artículos, promocionado productos que creías buenos y, al final del mes, tu cuenta de banco sigue igual... <span className="text-slate-900 font-medium underline decoration-yellow-400 decoration-4 underline-offset-8">esto es lo más importante que leerás este año.</span>
             </p>
             <div className="flex flex-col items-center lg:items-start gap-8">
               <a 
-                href="#oferta"
+                href="#oferta1"
                 className="group relative inline-flex items-center justify-center bg-sky-900 text-white px-16 py-7 rounded-sm text-2xl font-bold hover:bg-slate-900 transition-all duration-500 shadow-2xl shadow-sky-900/20"
               >
                 Comenzar mi transformación por $9,99
@@ -43,10 +43,10 @@ const App: React.FC = () => {
       </header>
 
       {/* Sección Narrativa: El Despertar del Creador */}
-      <section id="historia" className="py-24 bg-white border-b border-slate-50">
+      <section id="historia" className="py-12 bg-white border-b border-slate-50">
         <div className="max-w-3xl mx-auto px-6">
           <article className="prose prose-slate prose-lg max-w-none">
-            <h2 className="text-4xl font-serif text-slate-900 mb-12 leading-tight">La verdad detrás de las noches en vela frente al monitor.</h2>
+            <h2 className="text-4xl font-serif text-slate-900 mb-6 leading-tight">La verdad detrás de las noches en vela frente al monitor.</h2>
             <div className="space-y-8 text-slate-600 leading-[1.8] text-xl font-light">
               <p>
                 <span className="text-3xl font-serif text-slate-900 float-left mr-3 mt-1">L</span>o sé porque yo estuve allí, exactamente donde tú estás ahora. Durante meses, publiqué como si estuviera lanzando mensajes en una botella al inmenso océano de la indiferencia digital. Horas interminables de investigación sobre temas que pensaba que a todo el mundo le interesarían. Noches de edición robadas al sueño, al descanso y, lo que es más doloroso, al tiempo con mi familia.
@@ -63,7 +63,7 @@ const App: React.FC = () => {
               <p>
                 Probé guías superficiales que prometían riquezas en 30 días. Compraba programas que me dejaban con más dudas que respuestas y con la cartera notablemente más delgada. Leí a supuestos "expertos" que hablaban de libertad desde playas paradisíacas, pero que nunca habían publicado un solo artículo sin un patrocinio corporativo oculto detrás de sus palabras bonitas.
               </p>
-              <h3 className="text-3xl font-serif text-slate-900 pt-10">El momento en que todo cambió</h3>
+              <h3 className="text-3xl font-serif text-slate-900 pt-5">El momento en que todo cambió</h3>
               <p>
                 No fue un truco mágico. No fue un atajo secreto descubierto en un foro oscuro de la red profunda. Fue darme cuenta de que el problema no era mi esfuerzo —porque trabajaba como un galeote—, ni mi pasión —que era desbordante—, ni siquiera la calidad de mi redacción.
               </p>
@@ -82,13 +82,13 @@ const App: React.FC = () => {
       </section>
 
       {/* Por qué el 95% falla (Análisis Profundo) */}
-      <section id="filosofia" className="py-24 bg-slate-50">
+      <section id="filosofia" className="py-12 bg-slate-50">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-20">
+          <div className="text-center mb-10">
             <span className="text-red-600 font-bold uppercase tracking-[0.4em] text-xs">Un Diagnóstico Crudo</span>
             <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mt-4 leading-tight">¿Por qué sigues estancado a pesar de tu talento?</h2>
           </div>
-          <div className="grid gap-12">
+          <div className="grid gap-6">
             <div className="bg-white p-12 shadow-sm border border-slate-100 rounded-sm">
               <h3 className="text-2xl font-serif mb-6 text-sky-900">1. La trampa de la gratificación instantánea</h3>
               <p className="text-slate-600 leading-loose text-lg">
@@ -112,28 +112,28 @@ const App: React.FC = () => {
       </section>
 
       {/* Mapa de Batalla - Detalle masivo de capítulos */}
-      <section id="contenido" className="py-32 bg-white overflow-hidden">
+      <section id="contenido" className="py-16 bg-white overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-24 items-start">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
             <div className="sticky top-12">
               <span className="text-sky-900 font-bold uppercase tracking-[0.3em] text-xs">El Recorrido</span>
-              <h2 className="text-5xl font-serif text-slate-900 mt-6 leading-tight">Lo que vas a descubrir en cada página</h2>
-              <p className="text-xl text-slate-500 mt-8 leading-relaxed font-light">
+              <h2 className="text-5xl font-serif text-slate-900 mt-3 leading-tight">Lo que vas a descubrir en cada página</h2>
+              <p className="text-xl text-slate-500 mt-4 leading-relaxed font-light">
                 No es un manual teórico. Es un mapa de batalla con baches incluidos, con derrotas anotadas y con victorias pequeñas pero reales que te llevarán a la meta.
               </p>
-              <div className="mt-12 p-8 bg-sky-50 border-l-4 border-sky-900">
+              <div className="mt-6 p-8 bg-sky-50 border-l-4 border-sky-900">
                 <p className="text-sky-900 font-medium italic text-lg">
                   "Este libro condensa 15 años de errores propios para que tú puedas evitarlos en 15 capítulos."
                 </p>
               </div>
             </div>
-            <div className="space-y-12">
+            <div className="space-y-6 lg:space-y-12">
               {CAPITULOS.map((cap) => (
-                <div key={cap.numero} className="pb-12 border-b border-slate-100 group">
+                <div key={cap.numero} className="pb-6 lg:pb-12 border-b border-slate-100 group">
                   <span className="text-slate-200 text-6xl font-serif font-bold group-hover:text-sky-900/10 transition-colors block mb-4">
                     {cap.numero.toString().padStart(2, '0')}
                   </span>
-                  <h3 className="text-2xl font-serif text-slate-900 mb-6">{cap.titulo}</h3>
+                  <h3 className="text-2xl font-serif text-slate-900 mb-3">{cap.titulo}</h3>
                   <p className="text-slate-600 leading-loose text-lg">{cap.descripcion}</p>
                 </div>
               ))}
@@ -143,7 +143,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Autor - Biografía con Imagen Solicitada Circular */}
-      <section className="py-16 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-8 bg-slate-900 text-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 group">
@@ -167,15 +167,11 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Garantía y Oferta Final (Extensa) */}
-      <section id="oferta" className="py-32 bg-sky-50">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="bg-white p-12 md:p-24 rounded-sm shadow-2xl border border-sky-100 text-center relative">
-            <span className="absolute -top-6 left-1/2 -translate-x-1/2 bg-red-600 text-white px-10 py-3 text-xs font-bold tracking-[0.3em] uppercase shadow-xl rounded-full">
-              Garantía de Satisfacción Total
-            </span>
-            <h2 className="text-5xl font-serif text-slate-900 mb-10 leading-tight">Prueba el sistema sin un gramo de riesgo.</h2>
-            <div className="space-y-8 text-slate-600 text-xl leading-relaxed mb-16 font-light">
+      {/* Sección de Garantía */}
+      <section className="py-12 bg-white border-b border-slate-100">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+           <h2 className="text-4xl font-serif text-slate-900 mb-5 leading-tight">Prueba el sistema sin un gramo de riesgo.</h2>
+            <div className="space-y-4 text-slate-600 text-xl leading-relaxed font-light">
               <p>
                 Sé que hay mucho charlatán suelto. Sé que has sido decepcionado antes por promesas que no valían ni el píxel en el que estaban escritas. Por eso, quiero que sea mi reputación la que asuma todo el peso de esta decisión.
               </p>
@@ -183,33 +179,44 @@ const App: React.FC = () => {
                 Tienes 30 días naturales de garantía incondicional.
               </p>
               <p>
-                Léelo de principio a fin. Analiza cada capítulo. Empieza a implementar los cimientos de tu plataforma. Si en esos 30 días consideras que este mapa no vale muchísimo más de lo que has pagado por él, simplemente me escribes y te devuelvo tus $9,99. Sin preguntas incómodas, sin excusas, sin demoras.
+                Léelo de principio a fin. Analiza cada capítulo. Empieza a implementar los cimientos de tu plataforma. Si en esos 30 días no consideras que este mapa vale muchísimo más de lo que has pagado por él, simplemente me escribes y te devuelvo tus $9,99.
+              </p>
+            </div>
+        </div>
+      </section>
+
+      {/* BLOQUE NUEVO: oferta1 */}
+      <section id="oferta1" className="py-12 bg-sky-50 scroll-mt-20">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="bg-white p-6 md:p-10 rounded-sm shadow-2xl border border-sky-100 text-center relative flex flex-col items-center">
+            {/* Precio y Concepto */}
+            <div className="mb-6 flex flex-col items-center gap-4">
+              <div className="p-8 bg-slate-50 inline-block border border-slate-200">
+                <span className="text-7xl md:text-8xl font-serif font-bold text-sky-900">$9,99</span>
+                <p className="text-slate-400 uppercase tracking-widest text-xs mt-2 font-bold">Inversión Única</p>
+              </div>
+              <p className="text-slate-500 text-lg md:text-xl italic font-light max-w-sm">
+                Menos de lo que cuesta una comida rápida para dos.
               </p>
             </div>
 
-            <div className="mb-16 flex flex-col items-center gap-4">
-              <div className="p-10 bg-slate-50 inline-block border border-slate-200">
-                <span className="text-7xl font-serif font-bold text-sky-900">$9,99</span>
-                <p className="text-slate-400 uppercase tracking-widest text-xs mt-3 font-bold">Inversión Única</p>
-              </div>
-              <p className="text-slate-400 text-sm italic italic">Menos de lo que cuesta una comida rápida para dos.</p>
-            </div>
-
+            {/* Botón de Acción Principal */}
             <a 
               href="https://fcofrancis.pay.clickbank.net/?cbitems=6"
-              className="w-full max-w-lg bg-sky-900 text-white py-8 rounded-sm text-2xl font-bold hover:bg-slate-900 transition-all duration-500 shadow-2xl hover:-translate-y-1 mb-10 flex items-center justify-center"
+              className="w-full max-w-lg bg-sky-900 text-white py-8 rounded-sm text-2xl font-bold hover:bg-slate-900 transition-all duration-500 shadow-2xl hover:-translate-y-1 mb-6 flex items-center justify-center tracking-tight"
             >
               Sí, quiero acceso inmediato al mapa
             </a>
 
-            <div className="flex justify-center gap-12 pt-10 border-t border-slate-50">
+            {/* Sellos de Confianza */}
+            <div className="flex flex-wrap justify-center gap-10 md:gap-16 pt-5 border-t border-slate-100 w-full">
               <div className="flex items-center gap-3">
                 <svg className="w-8 h-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-                <span className="text-sm font-bold text-slate-700 tracking-wide uppercase">Calidad Editorial</span>
+                <span className="text-xs md:text-sm font-bold text-slate-700 tracking-widest uppercase">Calidad Editorial</span>
               </div>
               <div className="flex items-center gap-3">
                 <svg className="w-8 h-8 text-sky-900" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clipRule="evenodd"></path></svg>
-                <span className="text-sm font-bold text-slate-700 tracking-wide uppercase">Compra Segura</span>
+                <span className="text-xs md:text-sm font-bold text-slate-700 tracking-widest uppercase">Compra Segura</span>
               </div>
             </div>
           </div>
@@ -217,10 +224,10 @@ const App: React.FC = () => {
       </section>
 
       {/* Sección de Cierre: Una Invitación a la Reflexión */}
-      <section className="py-40 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-12 leading-tight">Un último pensamiento antes de que decidas.</h2>
-          <div className="prose prose-slate prose-xl max-w-none text-slate-600 leading-loose italic font-light space-y-8 mb-20">
+          <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-6 leading-tight">Un último pensamiento antes de que decidas.</h2>
+          <div className="prose prose-slate prose-xl max-w-none text-slate-600 leading-loose italic font-light space-y-4 mb-10">
             <p>
               "Imagina despertar dentro de un año. Mira tu cuenta bancaria y ve cómo los ingresos de tu bitácora crecen mes tras mes, no por un golpe de suerte, sino porque has construido un sistema que funciona incluso cuando tú descansas."
             </p>
@@ -228,18 +235,18 @@ const App: React.FC = () => {
               "Imagina la paz mental de saber que no dependes de las decisiones arbitrarias de un jefe o de los vaivenes de una oficina. Has construido algo tuyo, algo ético, algo que aporta valor real al mundo."
             </p>
           </div>
-          <div className="space-y-12">
+          <div className="space-y-6 lg:space-y-12">
             <p className="text-xl text-slate-500 font-light">Puedes seguir como hasta ahora, esperando que la suerte llame a tu puerta... <br/>o puedes decidir que ya es suficiente.</p>
             <div className="flex flex-col items-center gap-8">
               <a 
-                href="#oferta"
+                href="#oferta1"
                 className="bg-sky-900 text-white px-20 py-8 rounded-sm text-3xl font-bold hover:bg-slate-900 transition-all shadow-2xl hover:scale-105 active:scale-95 duration-300 inline-flex items-center justify-center"
               >
                 Sí, Francisco, quiero mi libertad
               </a>
-              <div className="pt-10">
+              <div className="pt-5">
                 <p className="font-serif text-3xl text-slate-900">Francisco González</p>
-                <p className="text-[10px] uppercase tracking-[0.5em] text-slate-400 mt-4 font-bold">Autor de "Mi Bitácora y los Programas de Afiliados"</p>
+                <p className="text-[10px] uppercase tracking-[0.5em] text-slate-400 mt-2 font-bold">Autor de "Mi Bitácora y los Programas de Afiliados"</p>
               </div>
             </div>
           </div>
@@ -249,12 +256,8 @@ const App: React.FC = () => {
       {/* Pie de Página Editorial Simplificado */}
       <footer className="bg-slate-900 text-slate-500 py-16 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
-          <p className="font-serif text-white text-xl mb-3 tracking-tighter">Francisco González</p>
-          <p className="text-[11px] leading-relaxed max-w-sm mb-8 tracking-wide font-medium">
-            Comprometido con la creación de ecosistemas digitales honestos y rentables desde 2008.
-          </p>
-          <div className="w-full pt-8 border-t border-slate-800/50">
-            <p className="text-[9px] tracking-[0.4em] opacity-50 font-bold">
+          <div className="w-full">
+            <p className="text-[9px] tracking-[0.4em] opacity-50 font-bold uppercase">
               &copy; {new Date().getFullYear()} Francisco González. Todos los derechos reservados.
             </p>
           </div>
