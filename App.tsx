@@ -3,10 +3,23 @@ import React from 'react';
 import { CAPITULOS } from './constants';
 
 const App: React.FC = () => {
+  // Función para manejar la navegación externa sin mostrar la URL al pasar el ratón
+  const realizarCompra = () => {
+    window.location.href = 'https://fcofrancis.pay.clickbank.net/?cbitems=6';
+  };
+
+  // Función para desplazamiento suave a secciones internas
+  const irASeccion = (id: string) => {
+    const elemento = document.getElementById(id);
+    if (elemento) {
+      elemento.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen selection:bg-yellow-100 text-slate-900">
       {/* Título Principal de Impacto con Imagen del Libro */}
-      <header className="relative pt-24 pb-10 lg:pt-40 lg:pb-16 bg-gradient-to-b from-sky-50/50 to-white overflow-hidden">
+      <header className="relative pt-16 pb-10 lg:pt-28 lg:pb-16 bg-gradient-to-b from-sky-50/50 to-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-slate-900 leading-[1.05] mb-6">
@@ -16,13 +29,13 @@ const App: React.FC = () => {
               Si has escrito decenas de artículos, promocionado productos que creías buenos y, al final del mes, tu cuenta de banco sigue igual... <span className="text-slate-900 font-medium underline decoration-yellow-400 decoration-4 underline-offset-8">esto es lo más importante que leerás este año.</span>
             </p>
             <div className="flex flex-col items-center lg:items-start gap-8">
-              <a 
-                href="#oferta1"
-                className="group relative inline-flex items-center justify-center bg-sky-900 text-white px-16 py-7 rounded-sm text-2xl font-bold hover:bg-slate-900 transition-all duration-500 shadow-2xl shadow-sky-900/20"
+              <button 
+                onClick={() => irASeccion('oferta1')}
+                className="group relative inline-flex items-center justify-center bg-sky-900 text-white px-16 py-7 rounded-sm text-2xl font-bold hover:bg-slate-900 transition-all duration-500 shadow-2xl shadow-sky-900/20 cursor-pointer"
               >
                 Comenzar mi transformación por $9,99
                 <span className="ml-4 group-hover:translate-x-2 transition-transform">→</span>
-              </a>
+              </button>
               <div className="flex items-center gap-3 text-slate-400 text-sm font-medium tracking-wide uppercase">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                 Acceso instantáneo al conocimiento
@@ -82,9 +95,9 @@ const App: React.FC = () => {
       </section>
 
       {/* Por qué el 95% falla (Análisis Profundo) */}
-      <section id="filosofia" className="pt-12 pb-3 bg-slate-50">
+      <section id="filosofia" className="py-20 bg-slate-50">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-10">
+          <div className="text-center mb-16">
             <span className="text-red-600 font-bold uppercase tracking-[0.4em] text-xs">Un Diagnóstico Crudo</span>
             <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mt-4 leading-tight">¿Por qué sigues estancado a pesar de tu talento?</h2>
           </div>
@@ -92,7 +105,7 @@ const App: React.FC = () => {
             <div className="bg-white p-12 shadow-sm border border-slate-100 rounded-sm">
               <h3 className="text-2xl font-serif mb-6 text-sky-900">1. La trampa de la gratificación instantánea</h3>
               <p className="text-slate-600 leading-loose text-lg">
-                Vivimos en una época donde nos venden el éxito como algo que sucede de la noche a la mañana. La mayoría de los creadores empiezan con un entusiasmo ciego, publican tres artículos y, al no ver ingresos el primer mes, abandonan. El sistema que te presento en este libro está diseñado para la resistencia. La rentabilidad real se construye sobre cimientos sólidos, no sobre arenas movedizas.
+                Vivimos en una época donde nos venden el éxito como algo que sucede de la noche a la mañana. La mayoría de los creadores empiezan con un entusiasmo ciego, publican tres artículos y, al no ver ingresos el primer mes, abandonan. El sistema que te presento en este libro está diseñado para la resistencia. La rentabilidad real se construye sobre cimientos sólidos, no sobre arenas moverizas.
               </p>
             </div>
             <div className="bg-white p-12 shadow-sm border border-slate-100 rounded-sm">
@@ -112,29 +125,29 @@ const App: React.FC = () => {
       </section>
 
       {/* Mapa de Batalla - Detalle masivo de capítulos */}
-      <section id="contenido" className="pt-3 pb-16 bg-white overflow-hidden">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
-            <div className="sticky top-12">
+      <section id="contenido" className="py-24 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
+            <div className="lg:sticky lg:top-24">
               <span className="text-sky-900 font-bold uppercase tracking-[0.3em] text-xs">El Recorrido</span>
-              <h2 className="text-5xl font-serif text-slate-900 mt-3 leading-tight">Lo que vas a descubrir en cada página</h2>
-              <p className="text-xl text-slate-500 mt-4 leading-relaxed font-light">
+              <h2 className="text-5xl md:text-6xl font-serif text-slate-900 mt-3 leading-tight">Lo que vas a descubrir en cada página</h2>
+              <p className="text-xl text-slate-500 mt-6 leading-relaxed font-light max-w-lg">
                 No es un manual teórico. Es un mapa de batalla con baches incluidos, con derrotas anotadas y con victorias pequeñas pero reales que te llevarán a la meta.
               </p>
-              <div className="mt-6 p-8 bg-sky-50 border-l-4 border-sky-900">
-                <p className="text-sky-900 font-medium italic text-lg">
+              <div className="mt-10 p-10 bg-sky-50 border-l-4 border-sky-900">
+                <p className="text-sky-900 font-medium italic text-xl leading-relaxed">
                   "Este libro condensa 15 años de errores propios para que tú puedas evitarlos en 15 capítulos."
                 </p>
               </div>
             </div>
-            <div className="space-y-6 lg:space-y-12">
+            <div className="space-y-12 lg:space-y-20">
               {CAPITULOS.map((cap) => (
-                <div key={cap.numero} className="pb-6 lg:pb-12 border-b border-slate-100 group">
-                  <span className="text-slate-200 text-6xl font-serif font-bold group-hover:text-sky-900/10 transition-colors block mb-4">
+                <div key={cap.numero} className="pb-12 border-b border-slate-100 group">
+                  <span className="text-slate-200 text-6xl md:text-7xl font-serif font-bold group-hover:text-sky-900/10 transition-colors block mb-2">
                     {cap.numero.toString().padStart(2, '0')}
                   </span>
-                  <h3 className="text-2xl font-serif text-slate-900 mb-3">{cap.titulo}</h3>
-                  <p className="text-slate-600 leading-loose text-lg">{cap.descripcion}</p>
+                  <h3 className="text-2xl md:text-3xl font-serif text-slate-900 mb-4">{cap.titulo}</h3>
+                  <p className="text-slate-600 leading-loose text-lg md:text-xl font-light">{cap.descripcion}</p>
                 </div>
               ))}
             </div>
@@ -143,7 +156,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Autor - Biografía con Imagen Solicitada Circular */}
-      <section className="py-8 bg-slate-900 text-white relative overflow-hidden">
+      <section className="py-16 bg-slate-900 text-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="w-24 h-24 md:w-32 md:h-32 flex-shrink-0 group">
@@ -155,7 +168,7 @@ const App: React.FC = () => {
                 />
               </div>
             </div>
-            <div className="flex-1 space-y-4">
+            <div className="flex-1 space-y-4 text-center md:text-left">
               <h2 className="text-3xl font-serif leading-tight italic text-yellow-400">Francisco González</h2>
               <div className="text-slate-400 text-base leading-relaxed font-light">
                 <p>
@@ -201,12 +214,12 @@ const App: React.FC = () => {
             </div>
 
             {/* Botón de Acción Principal */}
-            <a 
-              href="https://fcofrancis.pay.clickbank.net/?cbitems=6"
-              className="w-full max-w-lg bg-sky-900 text-white py-8 rounded-sm text-2xl font-bold hover:bg-slate-900 transition-all duration-500 shadow-2xl hover:-translate-y-1 mb-6 flex items-center justify-center tracking-tight"
+            <button 
+              onClick={realizarCompra}
+              className="w-full max-w-lg bg-sky-900 text-white py-8 rounded-sm text-2xl font-bold hover:bg-slate-900 transition-all duration-500 shadow-2xl hover:-translate-y-1 mb-6 flex items-center justify-center tracking-tight cursor-pointer"
             >
               Sí, quiero acceso inmediato al mapa
-            </a>
+            </button>
 
             {/* Sellos de Confianza */}
             <div className="flex flex-wrap justify-center gap-10 md:gap-16 pt-5 border-t border-slate-100 w-full">
@@ -238,12 +251,12 @@ const App: React.FC = () => {
           <div className="space-y-6 lg:space-y-12">
             <p className="text-xl text-slate-500 font-light">Puedes seguir como hasta ahora, esperando que la suerte llame a tu puerta... <br/>o puedes decidir que ya es suficiente.</p>
             <div className="flex flex-col items-center gap-8">
-              <a 
-                href="#oferta1"
-                className="bg-sky-900 text-white px-20 py-8 rounded-sm text-3xl font-bold hover:bg-slate-900 transition-all shadow-2xl hover:scale-105 active:scale-95 duration-300 inline-flex items-center justify-center"
+              <button 
+                onClick={() => irASeccion('oferta1')}
+                className="bg-sky-900 text-white px-20 py-8 rounded-sm text-3xl font-bold hover:bg-slate-900 transition-all shadow-2xl hover:scale-105 active:scale-95 duration-300 inline-flex items-center justify-center cursor-pointer"
               >
                 Sí, Francisco, quiero mi libertad
-              </a>
+              </button>
               <div className="pt-5">
                 <p className="font-serif text-3xl text-slate-900">Francisco González</p>
                 <p className="text-[10px] uppercase tracking-[0.5em] text-slate-400 mt-2 font-bold">Autor de "Mi Bitácora y los Programas de Afiliados"</p>
