@@ -6,10 +6,10 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen selection:bg-yellow-100 text-slate-900">
       {/* Título Principal de Impacto con Imagen del Libro */}
-      <header className="relative pt-10 pb-10 lg:pt-16 lg:pb-16 bg-gradient-to-b from-sky-50/50 to-white overflow-hidden">
+      <header className="relative pt-24 pb-10 lg:pt-40 lg:pb-16 bg-gradient-to-b from-sky-50/50 to-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-slate-900 leading-[1.05] mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-slate-900 leading-[1.05] mb-6">
               ¿Cansado de Publicar en tu Bitácora y No Ver <span className="text-red-600 italic">Ni un Solo Dólar</span>?
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed font-light">
@@ -82,7 +82,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Por qué el 95% falla (Análisis Profundo) */}
-      <section id="filosofia" className="py-12 bg-slate-50">
+      <section id="filosofia" className="pt-12 pb-3 bg-slate-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-10">
             <span className="text-red-600 font-bold uppercase tracking-[0.4em] text-xs">Un Diagnóstico Crudo</span>
@@ -112,7 +112,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Mapa de Batalla - Detalle masivo de capítulos */}
-      <section id="contenido" className="py-16 bg-white overflow-hidden">
+      <section id="contenido" className="pt-3 pb-16 bg-white overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-start">
             <div className="sticky top-12">
