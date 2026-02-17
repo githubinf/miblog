@@ -1,43 +1,12 @@
 
-import React, { useState } from 'react';
-import { CAPITULOS, TESTIMONIOS, PREGUNTAS } from './constants';
+import React from 'react';
+import { CAPITULOS } from './constants';
 
 const App: React.FC = () => {
-  const [comprando, setComprando] = useState(false);
-
-  const manejarCompra = () => {
-    setComprando(true);
-    setTimeout(() => {
-      alert("Redirigiendo a la pasarela de pago segura...");
-      setComprando(false);
-    }, 800);
-  };
-
   return (
     <div className="min-h-screen selection:bg-yellow-100">
-      {/* Navegación Refinada */}
-      <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="flex flex-col">
-            <span className="font-serif text-xl font-bold text-slate-900 tracking-tighter">Francisco González</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-slate-400 font-medium tracking-widest">Autoría Digital Ética</span>
-          </div>
-          <div className="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-bold text-slate-500">
-            <a href="#filosofia" className="hover:text-sky-700 transition-colors">La Filosofía</a>
-            <a href="#historia" className="hover:text-sky-700 transition-colors">Mi Historia</a>
-            <a href="#contenido" className="hover:text-sky-700 transition-colors">El Mapa</a>
-            <button 
-              onClick={manejarCompra}
-              className="bg-sky-900 text-white px-8 py-3 rounded-sm hover:bg-slate-800 transition-all shadow-lg shadow-sky-900/10"
-            >
-              Adquirir por $9,99
-            </button>
-          </div>
-        </div>
-      </nav>
-
       {/* Título Principal de Impacto con Imagen del Libro */}
-      <header className="relative pt-24 pb-20 lg:pt-32 lg:pb-32 bg-gradient-to-b from-sky-50/50 to-white overflow-hidden">
+      <header className="relative pt-20 pb-20 lg:pt-32 lg:pb-32 bg-gradient-to-b from-sky-50/50 to-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-slate-900 leading-[1.05] mb-12">
@@ -47,13 +16,13 @@ const App: React.FC = () => {
               Si has escrito decenas de artículos, promocionado productos que creías buenos y, al final del mes, tu cuenta de banco sigue igual... <span className="text-slate-900 font-medium underline decoration-yellow-400 decoration-4 underline-offset-8">esto es lo más importante que leerás este año.</span>
             </p>
             <div className="flex flex-col items-center lg:items-start gap-8">
-              <button 
-                onClick={manejarCompra}
+              <a 
+                href="#oferta"
                 className="group relative inline-flex items-center justify-center bg-sky-900 text-white px-16 py-7 rounded-sm text-2xl font-bold hover:bg-slate-900 transition-all duration-500 shadow-2xl shadow-sky-900/20"
               >
                 Comenzar mi transformación por $9,99
                 <span className="ml-4 group-hover:translate-x-2 transition-transform">→</span>
-              </button>
+              </a>
               <div className="flex items-center gap-3 text-slate-400 text-sm font-medium tracking-wide uppercase">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                 Acceso instantáneo al conocimiento
@@ -146,7 +115,7 @@ const App: React.FC = () => {
       <section id="contenido" className="py-32 bg-white overflow-hidden">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-24 items-start">
-            <div className="sticky top-32">
+            <div className="sticky top-12">
               <span className="text-sky-900 font-bold uppercase tracking-[0.3em] text-xs">El Recorrido</span>
               <h2 className="text-5xl font-serif text-slate-900 mt-6 leading-tight">Lo que vas a descubrir en cada página</h2>
               <p className="text-xl text-slate-500 mt-8 leading-relaxed font-light">
@@ -199,7 +168,7 @@ const App: React.FC = () => {
       </section>
 
       {/* Garantía y Oferta Final (Extensa) */}
-      <section className="py-32 bg-sky-50">
+      <section id="oferta" className="py-32 bg-sky-50">
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-white p-12 md:p-24 rounded-sm shadow-2xl border border-sky-100 text-center relative">
             <span className="absolute -top-6 left-1/2 -translate-x-1/2 bg-red-600 text-white px-10 py-3 text-xs font-bold tracking-[0.3em] uppercase shadow-xl rounded-full">
@@ -226,12 +195,12 @@ const App: React.FC = () => {
               <p className="text-slate-400 text-sm italic italic">Menos de lo que cuesta una comida rápida para dos.</p>
             </div>
 
-            <button 
-              onClick={manejarCompra}
-              className="w-full max-w-lg bg-sky-900 text-white py-8 rounded-sm text-2xl font-bold hover:bg-slate-900 transition-all duration-500 shadow-2xl hover:-translate-y-1 mb-10"
+            <a 
+              href="https://fcofrancis.pay.clickbank.net/?cbitems=6"
+              className="w-full max-w-lg bg-sky-900 text-white py-8 rounded-sm text-2xl font-bold hover:bg-slate-900 transition-all duration-500 shadow-2xl hover:-translate-y-1 mb-10 flex items-center justify-center"
             >
               Sí, quiero acceso inmediato al mapa
-            </button>
+            </a>
 
             <div className="flex justify-center gap-12 pt-10 border-t border-slate-50">
               <div className="flex items-center gap-3">
@@ -262,12 +231,12 @@ const App: React.FC = () => {
           <div className="space-y-12">
             <p className="text-xl text-slate-500 font-light">Puedes seguir como hasta ahora, esperando que la suerte llame a tu puerta... <br/>o puedes decidir que ya es suficiente.</p>
             <div className="flex flex-col items-center gap-8">
-              <button 
-                onClick={manejarCompra}
-                className="bg-sky-900 text-white px-20 py-8 rounded-sm text-3xl font-bold hover:bg-slate-900 transition-all shadow-2xl hover:scale-105 active:scale-95 duration-300"
+              <a 
+                href="#oferta"
+                className="bg-sky-900 text-white px-20 py-8 rounded-sm text-3xl font-bold hover:bg-slate-900 transition-all shadow-2xl hover:scale-105 active:scale-95 duration-300 inline-flex items-center justify-center"
               >
                 Sí, Francisco, quiero mi libertad
-              </button>
+              </a>
               <div className="pt-10">
                 <p className="font-serif text-3xl text-slate-900">Francisco González</p>
                 <p className="text-[10px] uppercase tracking-[0.5em] text-slate-400 mt-4 font-bold">Autor de "Mi Bitácora y los Programas de Afiliados"</p>
@@ -277,36 +246,15 @@ const App: React.FC = () => {
         </div>
       </section>
 
-      {/* Pie de Página Editorial */}
-      <footer className="bg-slate-900 text-slate-500 py-24 border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 justify-between items-start gap-20 mb-20">
-            <div>
-              <p className="font-serif text-white text-3xl mb-4 tracking-tighter">Francisco González</p>
-              <p className="text-xs uppercase tracking-[0.3em] leading-loose max-w-sm">
-                Comprometido con la creación de ecosistemas digitales honestos y rentables desde 2008.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-10">
-              <div className="space-y-4">
-                <p className="text-white text-[10px] font-bold uppercase tracking-widest">Legalidad</p>
-                <ul className="text-xs space-y-2 uppercase tracking-widest font-medium">
-                  <li><a href="#" className="hover:text-white transition-colors">Términos del Servicio</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Privacidad de Datos</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Política de Galletas</a></li>
-                </ul>
-              </div>
-              <div className="space-y-4">
-                <p className="text-white text-[10px] font-bold uppercase tracking-widest">Soporte</p>
-                <ul className="text-xs space-y-2 uppercase tracking-widest font-medium">
-                  <li><a href="#" className="hover:text-white transition-colors">Centro de Ayuda</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Contacto Directo</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="pt-10 border-t border-slate-800 text-center">
-            <p className="text-[10px] uppercase tracking-[0.5em]">
+      {/* Pie de Página Editorial Simplificado */}
+      <footer className="bg-slate-900 text-slate-500 py-16 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
+          <p className="font-serif text-white text-xl mb-3 tracking-tighter">Francisco González</p>
+          <p className="text-[11px] leading-relaxed max-w-sm mb-8 tracking-wide font-medium">
+            Comprometido con la creación de ecosistemas digitales honestos y rentables desde 2008.
+          </p>
+          <div className="w-full pt-8 border-t border-slate-800/50">
+            <p className="text-[9px] tracking-[0.4em] opacity-50 font-bold">
               &copy; {new Date().getFullYear()} Francisco González. Todos los derechos reservados.
             </p>
           </div>
