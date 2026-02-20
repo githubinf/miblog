@@ -258,10 +258,7 @@ const App: React.FC = () => {
               >
                 Sí, Francisco, quiero mi libertad
               </button>
-              <div className="pt-5">
-                <p className="font-serif text-3xl text-slate-900">Francisco González</p>
-                <p className="text-[10px] uppercase tracking-[0.5em] text-slate-400 mt-2 font-bold">Autor de "Mi Bitácora y los Programas de Afiliados"</p>
-              </div>
+
             </div>
           </div>
         </div>
@@ -272,7 +269,7 @@ const App: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
           <div className="w-full">
             <p className="text-[9px] tracking-[0.4em] opacity-50 font-bold uppercase">
-              &copy; {new Date().getFullYear()} Francisco González. Todos los derechos reservados.
+              &copy; {new Date().getFullYear()} Mi Blog y los Programas de Afiliados. Todos los derechos reservados.
             </p>
           </div>
         </div>
