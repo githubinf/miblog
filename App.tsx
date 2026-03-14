@@ -48,6 +48,9 @@ const App: React.FC = () => {
                 src="https://i.ibb.co/zV7cT4Vr/mi-blog-y-los-programas-de-afiliados.png" 
                 alt="Portada del libro: Mi Blog y los Programas de Afiliados" 
                 className="w-full h-auto drop-shadow-2xl transition-transform duration-700 group-hover:scale-105"
+                referrerPolicy="no-referrer"
+                width="448"
+                height="600"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-sky-900/5 to-transparent pointer-events-none"></div>
             </div>
@@ -166,6 +169,10 @@ const App: React.FC = () => {
                   src="https://i.ibb.co/XkxVB4VJ/6-300x300.jpg" 
                   alt="Francisco González - Autor" 
                   className="w-full h-full object-cover rounded-full grayscale group-hover:grayscale-0 transition-all duration-700"
+                  referrerPolicy="no-referrer"
+                  loading="lazy"
+                  width="128"
+                  height="128"
                 />
               </div>
             </div>
